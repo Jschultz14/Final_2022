@@ -56,6 +56,14 @@ The frequency plot (the first plot) above shows that nearly an equal number of m
 
 #### Numerical Descriptive Results
 
+```{r}
+table1 <- xtabs(~infected + treatment, data=Males)
+rowPerc(table1)
+colPerc(table1)
+```
+
+The numerical results above show the specific percentages of men who got COVID-19 after taking either the vaccine or the placebo. Of the males who took the vaccine, only 32.22% ended up getting COVID-19. However, of those who took the placebo, 67.78% of them contracted COVID. This supports the previous suggestion that the vaccine is effective in protecting males from COVID-19.
+
 ### Inferential Results
 
 ### Efficacy of Vaccine in Males

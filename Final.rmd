@@ -66,6 +66,14 @@ The numerical results above show the specific percentages of men who got COVID-1
 
 ### Inferential Results
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+The observed counts table shows the exact number of males who got COVID and the exact number of those who did not. This allows us to see specifically that 244 males who took the placebo got COVID in comparison to the 116 who got COVID after taking the vaccine (almost twice as many men who took the placebo got COVID). In addition to this, the p-value is very small (2.645e-11), which indicates that there is a statistical difference in the effectiveness of the placebo vs the vaccine in combating COVID-19 infections. This test also indicates by the odds ratio that males who take the placebo are around 2 times MORE likely to contract COVID than those who take the vaccine. 
+
 ### Efficacy of Vaccine in Males
 
 ## Females

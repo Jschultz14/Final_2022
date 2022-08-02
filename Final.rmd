@@ -52,6 +52,8 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
+The frequency plot (the first plot) above shows that nearly an equal number of men either took the placebo or the vaccine. This means the study is balanced and reliable. The second plot, the percentage plot, shows that of those who took the vaccine, only about 30% ended up contracting COVID-19. On the other hand, over 60% of the men who took the placebo ended up getting COVID-19. This would suggest that the vaccine is effective in preventing the contraction of COVID in males. 
+
 #### Numerical Descriptive Results
 
 ### Inferential Results

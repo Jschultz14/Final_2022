@@ -52,7 +52,7 @@ basicC + geom_bar(stat="identity",position="dodge")
 basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
-
+These plots represent the number of males and how the contraction of COVID relates to either taking the vaccine or taking the placebo. The code that creates these begins with code blocking beginning with dd2. dd2 is shown in the environment tab and includes 4 variables, which are infected, treatment, count, and prcent (percent). The second chunk of codes is called the basicC. This is also found in the environment tab and shows 9 variables. This information creates the top chart. Then basicCC is shown as the last set of codes in the environment tab. This too contains 9 variables and creates the percentage plot, or the one shown second.
 The frequency plot (the first plot) above shows that nearly an equal number of men either took the placebo or the vaccine. This means the study is balanced and reliable. The second plot, the percentage plot, shows that of those who took the vaccine, only about 30% ended up contracting COVID-19. On the other hand, over 60% of the men who took the placebo ended up getting COVID-19. This would suggest that the vaccine is effective in preventing the contraction of COVID in males. 
 
 #### Numerical Descriptive Results
@@ -100,7 +100,7 @@ EfficacyMalesHigh <- (malefisherhigh/(1+malefisherhigh)*100)
 EfficacyMalesHigh
 ```
 
-The 95% confidence interval of vaccine efficacy among males is between `r EfficacyMalesLow` to `r EfficacyMalesHigh`. The odds ratio is 68, meaning the vaccine is quite effective in protecting men from COVID-19. 
+The information above shows the effectiveness of the COVID-19 vaccine in males. The 95% confidence interval of vaccine efficacy among males is between `r EfficacyMalesLow` to `r EfficacyMalesHigh`. And the odds ratio is 68, which is well above 50, meaning the vaccine is quite effective in protecting men from COVID-19. 
 
 ## Females
 

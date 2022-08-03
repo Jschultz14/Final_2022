@@ -53,6 +53,7 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 These plots represent the number of males and how the contraction of COVID relates to either taking the vaccine or taking the placebo. The code that creates these begins with code blocking beginning with dd2. dd2 is shown in the environment tab and includes 4 variables, which are infected, treatment, count, and prcent (percent). The second chunk of codes is called the basicC. This is also found in the environment tab and shows 9 variables. This information creates the top chart. Then basicCC is shown as the last set of codes in the environment tab. This too contains 9 variables and creates the percentage plot, or the one shown second.
+
 The frequency plot (the first plot) above shows that nearly an equal number of men either took the placebo or the vaccine. This means the study is balanced and reliable. The second plot, the percentage plot, shows that of those who took the vaccine, only about 30% ended up contracting COVID-19. On the other hand, over 60% of the men who took the placebo ended up getting COVID-19. This would suggest that the vaccine is effective in preventing the contraction of COVID in males. 
 
 #### Numerical Descriptive Results
@@ -107,6 +108,25 @@ The information above shows the effectiveness of the COVID-19 vaccine in males. 
 ### Descriptive Results
 
 #### Graphical Descriptive Results
+
+```{r}
+dd2 <- Females %>% group_by(infected, treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+
+# the group_by followed by summarize(count=n())
+
+basicC <- ggplot(dd2,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
+These plots represent the number of males and how the contraction of COVID relates to either taking the vaccine or taking the placebo. The code that creates the first begins with code block beginning with dd2. dd2 is shown in the environment tab and includes 4 variables, which include infected, treatment, count, and prcent (percent). The second chunk of codes is called the basicC. This is also found in the environment tab and shows 9 variables. This information creates the top chart. Then basicCC is shown as the last set of codes in the environment tab. This too contains 9 variables and creates the percentage plot, or the one shown second.
+
+The frequency plot, the one shown first, shows that an almost equal amount of women took the placebo or the vaccines. This indicates that this study is balanced and reliable. The percentage plot, on the other hand, shows that around 40% of women who took the vaccine ended up contracting COVID. Whereas nearly 60% of women who took the placebo ended up getting COVID. This means the vaccine seems to be quite effective in combating COVID-19 in women.
 
 #### Numerical Descriptive Results
 

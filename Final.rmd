@@ -66,7 +66,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-The numerical results above show the specific percentages of men who got COVID-19 after taking either the vaccine or the placebo. Of the males who took the vaccine, only 32.22% ended up getting COVID-19. However, of those who took the placebo, 67.78% of them contracted COVID. This supports the previous suggestion that the vaccine is effective in protecting males from COVID-19.
+The numerical results above show the specific percentages of men who got COVID-19 after taking either the vaccine or the placebo. Of the males who took the vaccine, only 32.22% ended up getting COVID-19. However, of those who took the placebo, 67.78% of them contracted COVID. This supports the previous suggestion that the vaccine is effective in protecting males from COVID-19. As a matter of fact, it would seem that men who do not take the vaccine are about twice as likely to get COVID.
 
 ### Inferential Results
 
@@ -128,9 +128,11 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
-These plots represent the number of males and how the contraction of COVID relates to either taking the vaccine or taking the placebo. The code that creates the first begins with code block beginning with dd2. dd2 is shown in the environment tab and includes 4 variables, which include infected, treatment, count, and prcent (percent). The second chunk of codes is called the basicC. This is also found in the environment tab and shows 9 variables. This information creates the top chart. Then basicCC is shown as the last set of codes in the environment tab. This too contains 9 variables and creates the percentage plot, or the one shown second.
+These plots represent the number of females and the relationship between contracting COVID (or not) and whether one took the placebo or the vaccine. The code that creates the first begins with code block beginning with dd2. dd2 is shown in the environment tab and includes 4 variables, which include infected, treatment, count, and prcent (percent). The second chunk of codes is called the basicC. This is also found in the environment tab and shows 9 variables. This information creates the top chart. Then basicCC is shown as the last set of codes in the environment tab. This too contains 9 variables and creates the percentage plot, or the one shown second.
 
-The frequency plot, the one shown first, shows that an almost equal amount of women took the placebo or the vaccines. This indicates that this study is balanced and reliable. The percentage plot, on the other hand, shows that around 40% of women who took the vaccine ended up contracting COVID. Whereas nearly 60% of women who took the placebo ended up getting COVID. This means the vaccine seems to be quite effective in combating COVID-19 in women.
+The frequency plot, the one shown first, shows that an almost equal amount of women took the placebo or the vaccines. This indicates that this study is balanced and reliable. The percentage plot, on the other hand, shows that around 40% of women who took the vaccine ended up contracting COVID. However, nearly 60% of women who took the placebo ended up getting COVID. This plot, similar to the last plot concerning the males, shows that those who take the placebo are considerably more likely to contract COVID in comparison to those who take the vaccine. 
+
+Here's how these plots were read. In the first plot, the y-axis shows the count, which means the number of people who either got COVID-19 or not. The x-axis shows the number of those who were infected. In the second plot, the percentage plot, the two bars on the far left represent all of those who got COVID-19. The y-axis now represents the percentage of people who got COVID-19 after taking the vaccine or the placebo. The x-axis still shows whether or not a person got COVID-19 or did not.
 
 #### Numerical Descriptive Results
 
@@ -140,7 +142,8 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-These numerical results show the specific and accurate percentages of women who contracted COVID after taking either the placebo or the vaccine. Of those women who took the vaccine, 40% of them ended up contracting COVID. However, approximately 59% of women who took the vaccine ended up getting COVID. This would further suggest that the vaccine is somewhat effective in protecting women from the Corona Virus. 
+These numerical results show the specific and accurate percentages of women who contracted COVID after taking either the placebo or the vaccine. Of those women who took the vaccine, a confirmed 40% of them ended up contracting COVID. However, approximately 59% of women who took the vaccine ended up getting COVID. This would further suggest that the vaccine is effective in protecting women from the Corona Virus, as women who take the vaccine simply are not nearly as likely to get COVID when compared to those who take the placebo.
+
 ### Inferential Results
 
 ```{r}
@@ -150,7 +153,7 @@ FemaleFisher <- fisher.test(table1)
 FemaleFisher
 ```
 
-The above results are the output of the Fisher's Exact test. As shown, the p-value is extremely small at 9e-04. Being this small, the p-value insinuates that these results did not occur by chance or luck. 
+Of the results shown above, perhaps the most valuable is the information of the Fisher's Exact test. As shown, the p-value is extremely small at 9e-04. Being this small, the p-value insinuates that these results did not occur by chance or luck. 
 
 ### Efficacy of Vaccine in Females
 

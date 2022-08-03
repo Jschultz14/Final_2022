@@ -277,4 +277,13 @@ These numerical results above show the specific and accurate percentages of drug
 
 ### Inferential Results
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+DrugUserFisher <- fisher.test(table1)
+DrugUserFisher
+```
+
+Of the results shown above, what we will focus most on is the information of the Fisher's Exact test. As shown, the p-value is extremely small being that it is 3e-08. Being this small, the p-value insinuates that these results are not the effect of chance. The odd ratio above illustrates a ratio of 0.18. At the end of the day, drug users who take the vaccine are nearly 5x as likely to contract COVID, similar to LGBTQs. This vaccine is nearly completely ineffective in combating COVID in drug users.
+
 ### Efficacy of Vaccine in Druggies

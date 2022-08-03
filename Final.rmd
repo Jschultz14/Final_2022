@@ -179,6 +179,27 @@ Additionally, the odds ratio above (59) shows exactly how effective the vaccine 
 
 #### Graphical Descriptive Results
 
+```{r}
+dd2 <- LGBTQ %>% group_by(infected, treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+
+# the group_by followed by summarize(count=n())
+
+basicC <- ggplot(dd2,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
+These plots represent the number of LGBTQ members and the relationship between contracting COVID (or not) and whether one took the placebo or the vaccine. The code that creates the first begins with code block beginning with dd2. dd2 is shown in the environment tab and includes 4 variables, which include infected, treatment, count, and prcent (percent). The second chunk of codes is called the basicC. This is also found in the environment tab and shows 9 variables. This information creates the top chart. Then basicCC is shown as the last set of codes in the environment tab. This too contains 9 variables and creates the percentage plot, or the one shown second.
+
+The frequency plot, the one shown first, shows that an almost equal amount of LGBTQ members took the placebo or the vaccines. This indicates that this study is balanced and reliable. The percentage plot, on the other hand, shows that an astonishing 80% of LGBTQ community who took the vaccine ended up contracting COVID. However, only about 15% of LGBTQs who took the placebo ended up getting COVID. This plot, which is incredibly different from the two previous plots we've seen, shows that those who take the placebo are considerably LESS likely to contract COVID in comparison to those who take the vaccine. 
+
+Here's how these plots were read. In the first plot, the y-axis shows the count, which means the number of people who either got COVID-19 or not. The x-axis shows the number of those who were infected. In the second plot, the percentage plot, the two bars on the far left represent all of those who got COVID-19. The y-axis now represents the percentage of people who got COVID-19 after taking the vaccine or the placebo. The x-axis still shows whether or not a person got COVID-19 or did not.
+
 #### Numerical Descriptive Results
 
 ### Inferential Results

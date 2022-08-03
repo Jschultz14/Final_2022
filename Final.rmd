@@ -158,7 +158,20 @@ Of the results shown above, perhaps the most valuable is the information of the 
 
 ### Efficacy of Vaccine in Females
 
+```{r}
+effect <- FemaleFisher$p.value/(FemaleFisher$p.value +1)
+FemaleEffectiveness = FemaleFisher$estimate/(FemaleFisher$estimate +1)*100
+print(FemaleEffectiveness)
 
+low=(FemaleFisher$conf.int[1]/(FemaleFisher$conf.int[1] +1))*100
+hi=(FemaleFisher$conf.int[2]/(FemaleFisher$conf.int[2] +1))*100
+options(digits=2)
+
+```
+
+The information above shows the effectiveness of the COVID-19 vaccine in males. If the effectiveness shows to be above 50%, or ideally 60%, then we can conclude that the vaccine is effective in females. Given that the confidence interval of vaccine efficacy among females is between 53.50 to 64.01, which is decently above 50, we can confirm that the vaccine is effective in preventing women from contracting COVID. However, we can already make a comparison that confirms the vaccine does not appear to be as effective in combating COVID in females as it is in males.
+
+Additionally, the odds ratio above (59) shows exactly how effective the vaccine is for females. 
 
 ## LGBTQ
 

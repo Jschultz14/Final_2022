@@ -202,6 +202,14 @@ Here's how these plots were read. In the first plot, the y-axis shows the count,
 
 #### Numerical Descriptive Results
 
+```{r}
+table1 <- xtabs(~infected + treatment, data=LGBTQ)
+rowPerc(table1)
+colPerc(table1)
+```
+
+These numerical results above show the specific and accurate percentages of LGBTQs who contracted COVID after taking either the placebo or the vaccine. Of those LGBTQs who took the vaccine, a confirmed 87% of them ended up contracting COVID. However, approximately 13% of women who took the vaccine ended up getting COVID. This would further suggest that the vaccine is HIHGLY INEFFECTIVE in protecting LGBTQs from the Corona Virus, as those who take the vaccine are significantly more likely to get COVID when compared to those who take the placebo.
+
 ### Inferential Results
 
 ### Efficacy of Vaccine for LGBTQ

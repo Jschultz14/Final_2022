@@ -77,7 +77,7 @@ MaleFisher <- fisher.test(table1)
 MaleFisher
 ```
 
-The observed counts table shows the exact number of males who got COVID and the exact number of those who did not. This allows us to see specifically that 244 males who took the placebo got COVID in comparison to the 116 who got COVID after taking the vaccine (almost twice as many men who took the placebo got COVID). In addition to this, the p-value is very small (2.645e-11), which indicates that there is a statistical difference in the effectiveness of the placebo vs the vaccine in combating COVID-19 infections. This test also indicates by the odds ratio that males who take the placebo are around 2 times MORE likely to contract COVID than those who take the vaccine. 
+Of the information above, perhaps the most valuable is the Fisher's Exact Test. As shown, p-value is very small (2.645e-11), which indicates that there is a statistical difference in the effectiveness of the placebo vs the vaccine in combating COVID-19 infections and it is not just by chance. This test also indicates by the odds ratio that males who take the placebo are around 2 times MORE likely to contract COVID than those who take the vaccine. 
 
 ### Efficacy of Vaccine in Males
 
@@ -103,7 +103,9 @@ EfficacyMalesHigh <- (malefisherhigh/(1+malefisherhigh)*100)
 EfficacyMalesHigh
 ```
 
-The information above shows the effectiveness of the COVID-19 vaccine in males. The 95% confidence interval of vaccine efficacy among males is between `r EfficacyMalesLow` to `r EfficacyMalesHigh`. And the odds ratio is 68, which is well above 50, meaning the vaccine is quite effective in protecting men from COVID-19. 
+The information above shows the effectiveness of the COVID-19 vaccine in males. If the effectiveness shows to be above 50%, then we can conclude that the vaccine is effective in males. Given that the confidence interval of vaccine efficacy among males is between `r EfficacyMalesLow` to `r EfficacyMalesHigh`, which is well above 50, we can confirm that the vaccine is effective in preventing men from contracting COVID.
+
+Additionally, the odds ratio above (68) shows exactly how effective the vaccine is. 
 
 ## Females
 

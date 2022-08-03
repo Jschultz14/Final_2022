@@ -77,7 +77,7 @@ MaleFisher <- fisher.test(table1)
 MaleFisher
 ```
 
-Of the information above, perhaps the most valuable is the Fisher's Exact Test. As shown, p-value is very small (2.645e-11), which indicates that there is a statistical difference in the effectiveness of the placebo vs the vaccine in combating COVID-19 infections and it is not just by chance. This test also indicates by the odds ratio that males who take the placebo are around 2 times MORE likely to contract COVID than those who take the vaccine. 
+Of the information above, perhaps the most valuable is the Fisher's Exact Test. As shown, p-value is very small (2.645e-11), which indicates that there is a statistical difference in the effectiveness of the placebo vs the vaccine in combating COVID-19 infections and it is not just by chance. The odd ratio above illustrates a ratio of 2.1. Males who take the placebo are about 2 times more likely to contract COVID than those who take the vaccine.
 
 ### Efficacy of Vaccine in Males
 

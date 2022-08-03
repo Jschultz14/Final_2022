@@ -219,7 +219,7 @@ LGBTQFisher <- fisher.test(table1)
 LGBTQFisher
 ```
 
-Of the results shown above, what we will focus most on is the information of the Fisher's Exact test. As shown, the p-value is extremely small at 2e-09. Being this small, the p-value insinuates that these results did not occur by chance or luck. The odd ratio above illustrates a ratio of 0.15. At the end of the day, LGBTQs who take the vaccine are nearly 5x as likely to contract COVID. This vaccine is almost completely ineffective in combating COVID in the LGBTQ community.
+Of the results shown above, what we will focus most on is the information of the Fisher's Exact test. As shown, the p-value is extremely small at 2e-09. Being this small, the p-value insinuates that these results did not occur by chance or luck. The odd ratio above illustrates a ratio of 0.15. At the end of the day, LGBTQs who take the vaccine are nearly 3x+ as likely to contract COVID. This vaccine is almost completely ineffective in combating COVID in the LGBTQ community.
 
 ### Efficacy of Vaccine for LGBTQ
 
@@ -284,6 +284,27 @@ DrugUserFisher <- fisher.test(table1)
 DrugUserFisher
 ```
 
-Of the results shown above, what we will focus most on is the information of the Fisher's Exact test. As shown, the p-value is extremely small being that it is 3e-08. Being this small, the p-value insinuates that these results are not the effect of chance. The odd ratio above illustrates a ratio of 0.18. At the end of the day, drug users who take the vaccine are nearly 5x as likely to contract COVID, similar to LGBTQs. This vaccine is nearly completely ineffective in combating COVID in drug users.
+Of the results shown above, what we will focus most on is the information of the Fisher's Exact test. As shown, the p-value is extremely small being that it is 3e-08. Being this small, the p-value insinuates that these results are not the effect of chance. The odd ratio above illustrates a ratio of 0.18. At the end of the day, drug users who take the vaccine are nearly 3x as likely to contract COVID, similar to LGBTQs. This vaccine is nearly completely ineffective in combating COVID in drug users.
 
 ### Efficacy of Vaccine in Druggies
+
+```{r}
+effect <- DrugUserFisher$p.value/(DrugUserFisher$p.value +1)
+DrugUserEffectiveness = DrugUserFisher$estimate/(DrugUserFisher$estimate +1)*100
+print(DrugUserEffectiveness)
+
+low=(DrugUserFisher$conf.int[1]/(DrugUserFisher$conf.int[1] +1))*100
+hi=(DrugUserFisher$conf.int[2]/(DrugUserFisher$conf.int[2] +1))*100
+options(digits=2)
+
+```
+
+The information above shows the effectiveness of the COVID-19 vaccine in drug users. If the effectiveness shows to be above 50%, or ideally 60%, then we can conclude that the vaccine is effective in those who use drugs. Given that the confidence interval of vaccine efficacy among drug users is between 7.11 to 26.78, which is well below 50, we can confirm that the vaccine is grossly ineffective in keeping drug users from contracting COVID. 
+
+Additionally, the odds ratio above (15) shows exactly how effective the vaccine is for drug users, which is to say that it really does not work.
+
+## Discussion and Conclusion
+
+After reviewing all the data, the vaccine was only effective in protecting men and women from contracting the corona virus. The vaccine effectiveness was about 68% for males (specifically 67.78%) and around 59% for females. On the other hand, the COVID vaccine was NOT effective in protecting neither LGBTQ members nor those who use drugs. The vaccine effectiveness for LGBTQ members is 13%, while for drug users it is 15%. For both groups, taking the vaccine appear to up their chances of getting COVID substantially. When ranked, the vaccine is most effective for men, followed by women, drug users, then LGBTQ members. 
+
+If one identifies as LGBTQ or they use drugs, it is not recommended that said individual takes the vaccine. However, if you are a man or women, it would be recommended. 

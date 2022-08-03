@@ -208,7 +208,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-These numerical results above show the specific and accurate percentages of LGBTQs who contracted COVID after taking either the placebo or the vaccine. Of those LGBTQs who took the vaccine, a confirmed 87% of them ended up contracting COVID. However, approximately 13% of women who took the vaccine ended up getting COVID. This would further suggest that the vaccine is HIHGLY INEFFECTIVE in protecting LGBTQs from the Corona Virus, as those who take the vaccine are significantly more likely to get COVID when compared to those who take the placebo.
+These numerical results above show the specific and accurate percentages of LGBTQs who contracted COVID after taking either the placebo or the vaccine. Of those LGBTQs who took the vaccine, a confirmed 87% of them ended up contracting COVID. However, approximately 13% of LGBTQ members who took the vaccine ended up getting COVID. This would further suggest that the vaccine is HIGHLY INEFFECTIVE in protecting LGBTQs from the Corona Virus, as those who take the vaccine are significantly more likely to get COVID when compared to those who take the placebo.
 
 ### Inferential Results
 
@@ -266,6 +266,14 @@ The frequency plot, the one shown first, shows that an almost equal amount of dr
 Here's how these plots were read. In the first plot, the y-axis shows the count, which means the number of people who either got COVID-19 or not. The x-axis shows the number of those who were infected. In the second plot, the percentage plot, the two bars on the far left represent all of those who got COVID-19. The y-axis now represents the percentage of people who got COVID-19 after taking the vaccine or the placebo. The x-axis still shows whether or not a person got COVID-19 or did not.
 
 #### Numerical Descriptive Results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=DrugUser)
+rowPerc(table1)
+colPerc(table1)
+```
+
+These numerical results above show the specific and accurate percentages of drug users who contracted COVID after taking either the placebo or the vaccine. Of those drug users who took the vaccine, a confirmed 85% of them ended up contracting COVID. However, approximately 15% of drug users who took the vaccine ended up getting COVID. This would further suggest that the vaccine is HIGHLY INEFFECTIVE in protecting drug users from COVID-19, as those who take the vaccine are significantly more likely to get COVID when compared to those who take the placebo.
 
 ### Inferential Results
 

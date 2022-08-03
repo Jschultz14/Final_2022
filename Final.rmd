@@ -32,6 +32,10 @@ DrugUser <- filter(FinalData, DrugUser == "yes")
 
 A new  preventative vaccine (covid91) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
 
+## R Code Details
+
+To begin, the various variables from FinalData need to be altered from character variables to factor variables. This was done using the appropriate dyplr code. Next, the broad categories needed to be compacted into more specific subgroups in order to be studied properly and efficiently. Male and females, were separated, as were those who identify with the LGBTQ community and those who admit they are drug users. All of these categories were were isolated to determine if those populations specifically should or should not take the COVID-19 vaccine. So as to create an effectiveness interval for the four categories, each group in this study needed to be stored in separate variables. 
+
 ## Males
 
 ### Descriptive Results
@@ -307,4 +311,4 @@ Additionally, the odds ratio above (15) shows exactly how effective the vaccine 
 
 After reviewing all the data, the vaccine was only effective in protecting men and women from contracting the corona virus. The vaccine effectiveness was about 68% for males (specifically 67.78%) and around 59% for females. On the other hand, the COVID vaccine was NOT effective in protecting neither LGBTQ members nor those who use drugs. The vaccine effectiveness for LGBTQ members is 13%, while for drug users it is 15%. For both groups, taking the vaccine appear to up their chances of getting COVID substantially. When ranked, the vaccine is most effective for men, followed by women, drug users, then LGBTQ members. 
 
-If one identifies as LGBTQ or they use drugs, it is not recommended that said individual takes the vaccine. However, if you are a man or women, it would be recommended. 
+If one identifies as LGBTQ or they use drugs, it is not recommended that said individual takes the vaccine. However, if you are a man or woman, it would be recommended. 

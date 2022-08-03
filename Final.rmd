@@ -212,6 +212,15 @@ These numerical results above show the specific and accurate percentages of LGBT
 
 ### Inferential Results
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+LGBTQFisher <- fisher.test(table1)
+LGBTQFisher
+```
+
+Of the results shown above, what we will focus most on is the information of the Fisher's Exact test. As shown, the p-value is extremely small at 2e-09. Being this small, the p-value insinuates that these results did not occur by chance or luck. The odd ratio above illustrates a ratio of 0.15. At the end of the day, LGBTQs who take the vaccine are nearly 5x as likely to contract COVID. This vaccine is almost completely ineffective in combating COVID in the LGBTQ community.
+
 ### Efficacy of Vaccine for LGBTQ
 
 ## Druggies
